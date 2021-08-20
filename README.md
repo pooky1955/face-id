@@ -9,7 +9,6 @@ The link to the slides are here : https://docs.google.com/presentation/d/14PbiRZ
 If you would like to copy paste the code, here are the steps.
 Create a conda environment like this.
 
-**DO NOT INSTALL TENSORFLOW**
 The code below is also in `setup.sh`, so you can run `sh setup.sh` if you are on Mac/Linux
 ```sh
 conda create -n face-id-env
