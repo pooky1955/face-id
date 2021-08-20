@@ -29,9 +29,14 @@ You will need to modify keras' source code (In VSCode, ctrl-click on the filenam
 
 Go in `/home/.../miniconda3/my-env/lib/python3.6/site-packages/keras/engine/topology.py` at `line 3339`. 
 
+
 Remove the trailing `.decode('utf8')` statements from that line and the line below. It should now look like this.
+### Before
+![old_keras](https://user-images.githubusercontent.com/45111498/130293021-f7563ab1-4ea7-4e51-99b0-25c53a634585.png)
+### After
+![new_keras](https://user-images.githubusercontent.com/45111498/130293028-5afe5eb0-7b0b-4ad0-95a6-860461a725cf.png)
 
-
+### Now all should work!
 1. Git clone the repository
 2. Run `01_init.py` to assure all packages are installed
 3. Run `02_addface.py` to add a face. Press `p` to take a picture.
