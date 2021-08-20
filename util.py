@@ -1,4 +1,4 @@
-from mtcnn.mtcnn import MTCNN
+from mtcnn_cv2 import MTCNN
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 import cv2

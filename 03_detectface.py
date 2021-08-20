@@ -1,4 +1,5 @@
 import os
+os.environ["TF_FORCE_GPU_ALLOW_GROWTH"] = "true"
 import pickle
 from scipy.spatial.distance import cosine
 import cv2
@@ -27,7 +28,6 @@ def compare(candidate_embed,reference_embeds,labels,threshold=1):
 
 def show_distances(distances):
   text = ' | '.join([f"{distance[0]} - {distance[1]:.2f}" for distance in distances])
-  print(text)
 
 embed_files = os.listdir("faces")
 reference_embeds = load_batch(embed_files,folder_prefix="faces")
@@ -38,7 +38,6 @@ while True:
   is_ok, frame = cap.read()
   rgb_frame = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
   faces = detector.detect_faces(rgb_frame)
-  print(len(faces))
   if len(faces) == 1:
     x,y,w,h = faces[0]["box"]
     cv2.rectangle(frame,(x,y),(x+w,y+h),GREEN,4)

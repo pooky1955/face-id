@@ -1,12 +1,11 @@
+import os
+os.environ["TF_FORCE_GPU_ALLOW_GROWTH"] = "true"
 import cv2
-from mtcnn.mtcnn import MTCNN
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
-from tensorflow.keras.models import Model
-import os
 import pickle
 from util import get_snapshot, extract_face, show_face, get_embedding, save_embedding, extractor, detector
 
